@@ -1,0 +1,4 @@
+../Core/Src/AS5600.c:12:6:AS5600_Init	1
+../Core/Src/AS5600.c:18:19:AS5600_ReadRegister	2
+../Core/Src/AS5600.c:31:10:AS5600_GetRawAngle	2
+../Core/Src/AS5600.c:40:7:AS5600_GetAngleDegrees	1
