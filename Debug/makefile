@@ -1,6 +1,6 @@
 ################################################################################
 # Automatically-generated file. Do not edit!
-# Toolchain: GNU Tools for STM32 (11.3.rel1)
+# Toolchain: GNU Tools for STM32 (12.3.rel1)
 ################################################################################
 
 -include ../makefile.init
@@ -34,34 +34,34 @@ $(wildcard ../makefile.init) \
 $(wildcard ../makefile.targets) \
 
 
-BUILD_ARTIFACT_NAME := AS5600_coba
+BUILD_ARTIFACT_NAME := AS5600_STM32F1
 BUILD_ARTIFACT_EXTENSION := elf
 BUILD_ARTIFACT_PREFIX :=
 BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ARTIFACT_EXTENSION),.$(BUILD_ARTIFACT_EXTENSION),)
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXECUTABLES += \
-AS5600_coba.elf \
+AS5600_STM32F1.elf \
 
 MAP_FILES += \
-AS5600_coba.map \
+AS5600_STM32F1.map \
 
 SIZE_OUTPUT += \
 default.size.stdout \
 
 OBJDUMP_LIST += \
-AS5600_coba.list \
+AS5600_STM32F1.list \
 
 
 # All Target
 all: main-build
 
 # Main-build Target
-main-build: AS5600_coba.elf secondary-outputs
+main-build: AS5600_STM32F1.elf secondary-outputs
 
 # Tool invocations
-AS5600_coba.elf AS5600_coba.map: $(OBJS) $(USER_OBJS) /home/amin/STM32CubeIDE/workspace_1.13.2/AS5600_coba/STM32F103CBTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "AS5600_coba.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"/home/amin/STM32CubeIDE/workspace_1.13.2/AS5600_coba/STM32F103CBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AS5600_coba.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+AS5600_STM32F1.elf AS5600_STM32F1.map: $(OBJS) $(USER_OBJS) /home/amin/STM32CubeIDE/workspace_1.13.2/AS5600_STM32F1/STM32F103CBTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "AS5600_STM32F1.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"/home/amin/STM32CubeIDE/workspace_1.13.2/AS5600_STM32F1/STM32F103CBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AS5600_STM32F1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -70,14 +70,14 @@ default.size.stdout: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	@echo 'Finished building: $@'
 	@echo ' '
 
-AS5600_coba.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "AS5600_coba.list"
+AS5600_STM32F1.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "AS5600_STM32F1.list"
 	@echo 'Finished building: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) AS5600_coba.elf AS5600_coba.list AS5600_coba.map default.size.stdout
+	-$(RM) AS5600_STM32F1.elf AS5600_STM32F1.list AS5600_STM32F1.map default.size.stdout
 	-@echo ' '
 
 secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST)
